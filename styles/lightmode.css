@@ -1,0 +1,712 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+button,
+summary {
+    cursor: pointer;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+@font-face {
+	font-family: Melkweg;
+	src: url(../assets/melkweg-regular.otf);
+}
+
+@font-face {
+	font-family: Calibre;
+	src: url(../assets/calibre-regular.otf);
+}
+
+
+/* *********Custom properties**********/
+:root {
+    --wit: #fff;
+    --zwart: #000;
+
+    --kleur-text: rgb(17, 16, 16);
+    --kleur-text-alt: #fefefe;
+    --text-wit: rgb(255, 255, 255);
+    --text-zwart: rgb(255, 255, 255);
+
+    --agenda-kleur: #8d9196;
+    --thema-kleur: #a1476a;
+    --achtergrond-kleur: #868686;
+    --data-kleur: #6d6060;
+
+}
+
+
+
+/* *********General***********/
+body {
+    background-color: var(--achtergrond-kleur);
+    font-family: Calibre, Melkweg, Arial, Helvetica, sans-serif;
+}
+
+ul {
+    display: flex;
+}
+
+button {
+    background: var(--thema-kleur);
+    color: var(--text-wit);
+    border: none;
+}
+
+
+
+/* *********Header***********/
+header nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 6em;
+    flex-direction: column;
+    font-family: Melkweg, Comic-sans;
+
+}
+
+header nav section {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    padding-left: .8em;
+    background-color: var(--thema-kleur);
+    width: 90%;
+    height: 50%;
+
+
+}
+
+header nav section a {
+    color: var(--text-wit);
+    text-decoration: none;
+
+}
+
+header nav ul {
+    background-color: var(--achtergrond-kleur);
+    color: var(--text-wit);
+    display: flex;
+    width: 100%;
+    height: 50%;
+
+}
+
+header nav li {
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav li a {
+    color: var(--text-wit);
+    text-decoration: none;
+}
+
+
+
+header nav section button svg {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 3.3em;
+    height: 3.5em;
+    background-color: var(--thema-kleur);
+    fill: var(--zwart);
+
+}
+
+/* ********************/
+
+/* ********Artiest 1************/
+.index main section:nth-of-type(1) div img {
+    width: 100%;
+    height: 15em;
+    margin-bottom: -.2em;
+}
+
+.index main section:nth-of-type(1) div {
+    position: relative;
+}
+
+.index main section:nth-of-type(1) div>div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.index main section:nth-of-type(1) div>div p {
+    background: var(--data-kleur);
+    color: var(--text-wit);
+    font-family: Melkweg;
+    font-size: 1.1em;
+    padding: .5em;
+}
+
+.index main section:nth-of-type(1) div>div button {
+    width: 3em;
+}
+
+.index main section:nth-of-type(1) article {
+    background: var(--wit);
+    padding: 1.2em;
+}
+
+.index main section:nth-of-type(1) h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--kleur-text);
+}
+
+.index main section:nth-of-type(1) article {
+    height: 8em;
+    width: 100%;
+    margin-bottom: .7em;
+    color: var(--kleur-text);
+}
+
+.index main section article:nth-of-type(1) p:nth-of-type(1),
+.index main section article:nth-of-type(1) p:nth-of-type(2) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    padding: .2em 0;
+
+}
+
+/* ********************/
+
+/* **********Net bevestigd**********/
+.index main section:nth-of-type(2) {
+    background: var(--agenda-kleur);
+    height: 18em;
+    width: 100%;
+    padding: 30px 20px 0;
+    margin-bottom: 10px;
+    font-family: Melkweg, Arial, Helvetica, sans-serif;
+    position: relative;
+
+}
+
+.index main section:nth-of-type(2) h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: .8;
+    color: var(--text-wit);
+}
+
+.index main section:nth-of-type(2) ul {
+    flex-direction: column;
+}
+
+.index main section:nth-of-type(2) ul li {
+    width: 100%;
+    line-height: 1.7em;
+    text-shadow: 2px 1px black;
+    font-size: 1.2em;
+}
+
+.index main section:nth-of-type(2) a {
+    text-decoration: none;
+    width: 100%;
+    padding: 5px 0;
+    color: var(--wit);
+}
+
+.index main section:nth-of-type(2) a>abbr {
+    margin-right: 1.4em;
+}
+
+.index main section:nth-of-type(2) a>p {
+    display: inline;
+}
+
+.index main section:nth-of-type(2)>a {
+    background-color: var(--data-kleur);
+    padding: 1em 2em;
+    text-align: center;
+    font-size: 1.2em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.index main>button {
+    font-family: Melkweg, Arial, Helvetica, sans-serif;
+    display: flex;
+    font-size: 1em;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 3.2em;
+}
+
+/* ********************/
+
+/* ********Artiest nummer 2************/
+.index main section:nth-of-type(3) div img {
+    width: 100%;
+    height: 15em;
+    margin-bottom: -.2em;
+}
+
+.index main section:nth-of-type(3) div {
+    position: relative;
+}
+
+.index main section:nth-of-type(3) div>div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.index main section:nth-of-type(3) div>div p {
+    background: var(--data-kleur);
+    color: var(--text-wit);
+    font-family: Melkweg;
+    font-size: 1.1em;
+    padding: .5em;
+
+}
+
+.index main section:nth-of-type(3) div>div button {
+    width: 3em;
+}
+
+.index main section:nth-of-type(3) article {
+    background: var(--wit);
+    color: var(--kleur-text);
+    padding: 1.2em;
+}
+
+.index main section:nth-of-type(3) h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--kleur-text);
+}
+
+.index main section:nth-of-type(3) article {
+    height: 8em;
+    width: 100%;
+    margin-bottom: .7em;
+}
+
+/* ********************/
+
+/* **********Footer 1 start**********/
+.index footer:nth-of-type(1) {
+    padding: 0 10px 10px;
+}
+
+.index footer:nth-of-type(1) article:nth-of-type(1) {
+    background: var(--achtergrond-kleur);
+    border: 3px solid var(--zwart);
+    padding: 30px;
+    max-width: 415px;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.index footer:nth-of-type(1) article:nth-of-type(1) h2 {
+    color: var(--wit);
+    font-family: Melkweg, Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 400;
+
+}
+
+.index footer:nth-of-type(1) article:nth-of-type(1) p {
+    color: var(--wit);
+    margin-bottom: 1em;
+    font-size: 1.2em;
+
+}
+
+.index footer:nth-of-type(1) article:nth-of-type(1) a {
+    color: var(--wit);
+    text-decoration: underline;
+}
+
+.index footer:nth-of-type(1)>h3 {
+    font-family: Melkweg, Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--wit);
+
+}
+
+.index footer {
+    background-color: var(--achtergrond-kleur);
+
+}
+
+/* ********************/
+
+
+
+
+/* **********Footer 2 start **********/
+.index footer:nth-of-type(2) ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0em .4em;
+    padding-bottom: 1em;
+
+}
+
+.index footer:nth-of-type(2) h3 {
+    text-align: center;
+    color: var(--text-wit);
+    font-size: 1.7em;
+    font-weight: 400;
+    font-family: Melkweg, Arial, Helvetica, sans-serif;
+}
+
+.index footer:nth-of-type(2) ul li {
+    border: var(--wit) 4px solid;
+}
+
+
+.index footer:nth-of-type(2) ul li svg path {
+    fill: var(--wit);
+}
+
+.index footer:nth-of-type(2) ul li svg {
+    height: 5em;
+    width: 4.4em;
+}
+
+.index footer:nth-of-type(2) ul li svg:active {
+    animation-name: bounce;
+    transform: scale(1.2);
+    transform: rotate(180deg);
+    animation: infinite;
+    animation-duration: 3s;
+
+}
+
+/* ********************* */
+
+
+/* *****Nieuwsbrief START****** */
+.index article:nth-of-type(1) {
+    color: var(--text-wit);
+    background: var(--thema-kleur);
+    padding: 1.5em;
+}
+
+.index main article:nth-of-type(1) form input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.4em;
+    padding: 1em 0 1em 1em;
+    border: 0;
+    font-size: 1em;
+    background: var(--agenda-kleur);
+
+}
+
+.index main>article:nth-of-type(1) p:nth-of-type(1) {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.index main>article:nth-of-type(1) p:nth-of-type(2) {
+    padding: 1em 0;
+    font-size: 1.1em;
+
+}
+
+.index main article:nth-of-type(1) form::after {
+    content: "";
+    position: relative;
+    top: -8px;
+    display: block;
+    height: 1px;
+    margin-right: 15px;
+    margin-left: 15px;
+    background: #fff;
+}
+
+::placeholder {
+    color: var(--text-wit);
+
+}
+
+/******************************
+
+/* *****LASER START****** */
+
+.index>div:nth-of-type(1) {
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.index>div:nth-of-type(1) img {
+    transform: rotate(90deg);
+    height: 15em;
+    width: 15em;
+    top: -2.4em;
+    left: -2.5em;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+/* *****LASER END****** */
+
+
+/* *****MONGUS START****** */
+.index>div:nth-of-type(2) {
+    height: 100%;
+    width: 100%;
+
+}
+
+.index>div:nth-of-type(2) img {
+    height: 35em;
+    width: 35em;
+    opacity: 0;
+    z-index: 1;
+    position: fixed;
+    right: -6em;
+    pointer-events: none;
+
+}
+
+/* ********************* */
+
+
+
+
+
+
+
+
+
+
+
+/* ********************* */
+/* CODE 2E PAGNA */
+/* ********************* */
+
+
+/* *********Plaatje + Descriptie************ */
+#agenda img {
+
+    width: 100%;
+    height: 15em;
+}
+
+#agenda div>section:nth-of-type(1) {
+    background-color: var(--wit);
+    ;
+    width: 90%;
+    padding: 1em;
+
+}
+
+#agenda div:nth-of-type(1) section p:nth-of-type(1) {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+#agenda div:nth-of-type(1) section p:nth-of-type(2) {
+    font-family: Melkweg, Arial, Helvetica, sans-serif;
+    margin-top: 1.5em;
+    font-size: 1.2em;
+
+}
+
+/* ********************* */
+
+/* *********Datum divje************ */
+#agenda>div:nth-of-type(1) {
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+#agenda>div:nth-of-type(1) section {
+    width: 100%;
+}
+
+#agenda>div:nth-of-type(1) aside {
+    font-family: Melkweg, Arial, Helvetica, sans-serif;
+    color: var(--wit);
+    width: 100%;
+    height: 6em;
+    background-color: var(--data-kleur);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#agenda>div:nth-of-type(1) aside p:nth-of-type(1) {
+    font-size: 2.3em;
+}
+
+#agenda>div:nth-of-type(1) aside p:nth-of-type(2) {
+    font-size: 1.3em;
+}
+
+#agenda div:nth-of-type(1) section p:nth-of-type(3) {
+    margin-top: 1em;
+    font-size: 1.2em;
+    width: 30%;
+
+}
+
+/* ********************* */
+
+/* *********Cineville ************ */
+#agenda>section:nth-of-type(1) {
+    background-color: var(--data-kleur);
+    color: var(--wit);
+    width: 75%;
+    padding: 1em;
+}
+
+#agenda>section:nth-of-type(1) a {
+    text-decoration: underline;
+    color: var(--wit);
+
+}
+
+#agenda>section:nth-of-type(1)>p:nth-of-type(1n) {
+    padding-bottom: 1em;
+}
+
+
+
+
+/* *********Intro Pepijn************ */
+#agenda article:nth-of-type(1) {
+    background: var(--wit);
+    padding: 1em;
+}
+
+#agenda article:nth-of-type(1) h2 {
+    padding-bottom: .5em;
+}
+
+#agenda>article:nth-of-type(1) p {
+    padding-bottom: 1em;
+}
+
+/* ********************* */
+
+/* **********Film info*********** */
+
+#agenda>dl:nth-of-type(1) {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    background-color: var(--wit);
+    margin-top: 1em;
+    padding: 1em;
+    width: 100%;
+    height: 50%;
+}
+
+#agenda>dl:nth-of-type(1) dd {
+    flex: 0 0 40%;
+    font-weight: bold;
+
+}
+
+#agenda>dl:nth-of-type(1) dt {
+    flex: 0 0 60%;
+
+}
+
+/* ********************* */
+
+
+/* *********Zaal opening************ */
+#agenda>section:nth-of-type(2) {
+    height: 5em;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+
+}
+
+#agenda>section:nth-of-type(2) article {
+    grid-column: 2;
+    background-color: var(--agenda-kleur);
+}
+
+#agenda>section:nth-of-type(2) article>p {
+    height: fit-content;
+    color: var(--text-wit);
+
+}
+
+#agenda>section:nth-of-type(2) article>p:nth-of-type(1),
+#agenda>section:nth-of-type(2) article>p:nth-of-type(2) {
+    padding-bottom: 1em;
+}
+
+/* ********************* */
+
+/* **********Twitter*********** */
+#agenda>section:nth-of-type(2)>div {
+    border: 3px solid var(--wit);
+    margin: .4em;
+
+}
+
+
+#agenda>section:nth-of-type(2) svg {
+    fill: var(--wit);
+    height: 5em;
+    width: 5em;
+
+}
+
+#agenda>section:nth-of-type(2) a {
+    color: var(--text-wit);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+/* ********************* */
+
+/* **********Youtube video*********** */
+#agenda>div:nth-of-type(2) {
+    margin-top: 3em;
+    height: 100%;
+    width: 100%;
+    padding: 1em 0;
+}
+
+#agenda>div:nth-of-type(2) iframe {
+    height: 15em;
+    width: 100%
+}
+
+/* ********************* */
+
